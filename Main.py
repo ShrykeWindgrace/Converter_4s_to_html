@@ -106,8 +106,8 @@ def parse_4s_to_stack():
         for l in fh.readlines():
             res, token, line = starts_with_token(line=l.rstrip())
             if not res:
-                # cur_text += ("\n"+line)
-                cur_text += (html_wrap(line, el_type='p', el_class='what'))
+                cur_text += ("<br/>"+line)
+                # cur_text += (html_wrap(line, el_type='p', el_class='what'))
             else:
                 if token != cur_token:
                     stack.append((cur_token, cur_text))
